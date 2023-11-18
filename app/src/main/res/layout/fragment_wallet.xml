@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".wallets.WalletFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+
+                android:gravity="center"
+                android:text="Available Balance"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/walletBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:text="₹ 0.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize40" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1"
+            android:layout_marginTop="@dimen/size10"
+            android:background="@color/colorLightGrey" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size5"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardElevation="3dp"
+                android:layout_weight="1"
+                android:id="@+id/securityCard"
+                app:cardUseCompatPadding="true"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/security_icon"
+                        android:layout_width="@dimen/size40"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/size5"
+                        android:layout_height="@dimen/size35"
+                        android:src="@drawable/lock" />
+
+
+                    <TextView
+                        android:id="@+id/security_deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:gravity="center"
+                        android:textColor="@color/colorDarkGrey"
+                        android:text="Deposite History"
+                        android:textSize="@dimen/size12" />
+
+                    <TextView
+                        android:id="@+id/refund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:gravity="center"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/size10" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardElevation="3dp"
+                android:layout_weight="1"
+                app:cardUseCompatPadding="true"
+                android:id="@+id/whatsappCard"
+
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/whatsapp_icon"
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/size40"
+                        android:src="@drawable/whatsapp_icon" />
+                    <TextView
+                        android:id="@+id/request_security_refund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginTop="@dimen/size5"
+                        android:gravity="center"
+                        android:text="Support"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="@dimen/size13"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardElevation="3dp"
+                android:layout_weight="1"
+                android:id="@+id/transationCard"
+                app:cardUseCompatPadding="true"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/transation_icon"
+                        android:layout_width="@dimen/margin_40"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/size40"
+                        android:src="@drawable/transaction" />
+
+
+                    <TextView
+                        android:id="@+id/rechargeHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/size5"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="@dimen/size13"
+                        android:text="Transaction History"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:text="Recharge Amount"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/autotext"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size5"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_marginRight="@dimen/size20"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter Amount"
+                android:inputType="number|textNoSuggestions"
+                android:maxLength="10"
+                android:imeOptions="actionDone"
+
+                android:textSize="@dimen/textsize14" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/five_hundred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_login"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="500"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/one_thousand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:background="@drawable/border_login"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="1000"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_16" />
+
+
+            <TextView
+                android:id="@+id/fifteen_hundred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:background="@drawable/border_login"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="1500"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/two_thousand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_login"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="2000"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_50"
+            android:layout_marginRight="@dimen/margin_50"
+            android:background="@color/colorOrange"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/size10"
+            android:padding="@dimen/margin_12"
+            android:text="Add Money"
+            android:layout_marginBottom="@dimen/size5"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_16" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size15"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:text="@string/main_wallet_amount_cannot_be_more_than_rs_10000"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/textsize13" />
+
+    </LinearLayout>
+</ScrollView>

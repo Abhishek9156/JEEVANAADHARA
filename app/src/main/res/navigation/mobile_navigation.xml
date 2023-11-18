@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.jeevanaadhara.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_book_now"
+        android:name="com.example.jeevanaadhara.ui.booknow.BookNowFragment"
+        android:label="@string/menu_book_now"
+        tools:layout="@layout/fragment_book_now" />
+
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.example.jeevanaadhara.ui.myorders.MyOrdersFragment"
+        android:label="@string/menu_my_order"
+        tools:layout="@layout/fragment_my_orders" />
+
+
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.jeevanaadhara.account.AccountFragment"
+        android:label="@string/menu_accounts"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/nav_wallet"
+        android:name="com.example.jeevanaadhara.wallets.WalletFragment"
+        android:label="@string/menu_wallets"
+        tools:layout="@layout/fragment_wallet" />
+
+     <fragment
+        android:id="@+id/nav_refer_earn"
+        android:name="com.example.jeevanaadhara.referandearn.ReferalAndEarnFragment"
+        android:label="@string/menu_refer_and_arn"
+        tools:layout="@layout/fragment_referal_and_earn" />
+    <fragment
+        android:id="@+id/nav_support"
+        android:name="com.example.jeevanaadhara.support.SupportFragment"
+        android:label="@string/menu_support"
+        tools:layout="@layout/fragment_support" />
+
+
+
+<!--Bottom drawer-->
+    <fragment
+        android:id="@+id/bottom_home"
+        android:name="com.example.jeevanaadhara.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bottom_subscription"
+        android:name="com.example.jeevanaadhara.subscription.SubscriptionFragment"
+        android:label="@string/menu_subscription"
+        tools:layout="@layout/fragment_subscription" />
+
+    <fragment
+        android:id="@+id/bottom_wallet"
+        android:name="com.example.jeevanaadhara.wallets.WalletFragment"
+        android:label="@string/menu_wallets"
+        tools:layout="@layout/fragment_wallet" />
+
+    <fragment
+        android:id="@+id/bottom_my_orders"
+        android:name="com.example.jeevanaadhara.ui.myorders.MyOrdersFragment"
+        android:label="@string/menu_my_order"
+        tools:layout="@layout/fragment_my_orders" />
+</navigation>

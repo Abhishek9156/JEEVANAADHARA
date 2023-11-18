@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_30"
+                    android:layout_marginStart="@dimen/margin_30"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:text="Get more water with caring in return!"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize20" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_170"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:background="@drawable/ic_img_graphic_referal" />
+
+                    <TextView
+                        android:id="@+id/refer_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size21"
+                        android:drawableLeft="@drawable/ic_refer_a_friend"
+                        android:drawablePadding="@dimen/size10"
+                        android:text="Refer friend"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize14" />
+
+                    <TextView
+                        android:id="@+id/textJoinStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:drawableLeft="@drawable/ic_count"
+                        android:drawablePadding="@dimen/size10"
+                        android:text="Friend join"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/textsize14" />
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+                    app:cardCornerRadius="@dimen/margin_5"
+                    app:cardElevation="@dimen/margin_5">
+
+                    <LinearLayout
+                        android:id="@+id/textCopyReferral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:gravity="center"
+                            android:text="BC024C"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="@dimen/textsize14" />
+
+                        <TextView
+                            android:id="@+id/textReferralCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:gravity="center"
+                            android:text="Your invite code"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/textsize26" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_20"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_12"
+                    android:text="Invite"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_16" />
+
+            </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

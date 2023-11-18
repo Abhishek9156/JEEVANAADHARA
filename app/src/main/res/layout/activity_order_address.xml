@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/map_view_parent"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="150dp">-->
+
+<!--            <FrameLayout-->
+<!--                android:id="@+id/map_container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="150dp" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/locationMarker"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageMarker"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginBottom="@dimen/margin_12"-->
+<!--                    android:src="@drawable/ic_marker_blue" />-->
+<!--            </LinearLayout>-->
+
+<!--        </FrameLayout>-->
+
+        <TextView
+            android:id="@+id/address_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize14" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/address_string"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size5">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:textSize="@dimen/textsize14"
+                            android:imeOptions="actionNext"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Mobile"
+                            android:id="@+id/mobile"
+                            android:inputType="number"
+                            android:textSize="@dimen/textsize14"
+                            android:imeOptions="actionNext"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_height="wrap_content"
+                        app:counterMaxLength="10"
+                        app:counterEnabled="true">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Alternate Mobile Number"
+                            android:inputType="number"
+                            android:id="@+id/alternatenumber"
+                            android:textSize="@dimen/textsize14"
+                            android:imeOptions="actionNext"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size5">
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/data"
+                            android:hint="Address(House No, Building,Street)"
+                            android:inputType="text"
+                            android:textSize="@dimen/textsize14"
+                            android:imeOptions="actionNext"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Floor Address"
+                                android:inputType="text"
+                                android:textSize="@dimen/textsize14"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <View
+                            android:layout_width="@dimen/size5"
+                            android:layout_height="@dimen/margin_1" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Tower"
+                                android:inputType="text"
+                                android:textSize="@dimen/textsize14"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10"
+                        android:orientation="horizontal">
+
+
+<!--                        <AutoCompleteTextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:id="@+id/societyId"-->
+<!--                            android:hint="Enter Socity Name" />-->
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Locality"
+                                android:inputType="text"
+                                android:textSize="@dimen/textsize14"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <View
+                            android:layout_width="@dimen/size5"
+                            android:layout_height="@dimen/margin_1" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/city"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="City/District"
+                                android:layout_weight="1"
+                                android:inputType="text"
+                                android:textSize="@dimen/textsize14"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/pincode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Pincode"
+                                android:inputType="text"
+                                android:textSize="@dimen/textsize14"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/margin_20"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/state"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="State"
+                                android:inputType="text"
+                                android:textSize="@dimen/textsize14"
+                                android:imeOptions="actionNext"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/addressType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size10">
+
+                    <RadioButton
+                        android:id="@+id/radioHome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Home" />
+
+                    <RadioButton
+                        android:id="@+id/radioOffice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Office" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginBottom="60dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Set as Default Address"
+                        android:textSize="@dimen/textsize18" />
+
+                    <Switch
+                        android:id="@+id/switchbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_50"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/size1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size1"
+                android:layout_weight="1"
+                android:background="@color/colorOrange"
+                android:gravity="center"
+                android:padding="@dimen/size12"
+                android:text="Cancel"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize16" />
+
+            <TextView
+                android:id="@+id/save_address"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="@dimen/size12"
+                android:text="Save"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize16" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

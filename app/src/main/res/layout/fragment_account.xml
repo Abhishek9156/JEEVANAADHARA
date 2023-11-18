@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/size10"
+    android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/input_layout_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/edAccountHolder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/account_holder_name"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/textsize14" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/edAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/account_number"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/textsize14" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/edConfirmAccound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/confirm_account_number"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/textsize14" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/edIfscCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/ifsc_code"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/textsize14" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/edBranchName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/branch_name"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/textsize14" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+android:id="@+id/edBankName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/bank_name"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/textsize14" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_50"
+        android:layout_marginRight="@dimen/margin_50"
+        android:background="@color/colorOrange"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/margin_12"
+        android:text="@string/submit"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/colorWhite"
+
+        android:textSize="@dimen/text_16" />
+
+</LinearLayout>
+
+</ScrollView>
